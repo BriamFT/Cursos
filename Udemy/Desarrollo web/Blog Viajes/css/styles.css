@@ -1,0 +1,235 @@
+html{
+    font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px (snipet)
+    Elemento Raiz (ROOT EM = rem) Este valor es igual para todo el documento **/ 
+    box-sizing: border-box; /* Snipet para que no afecte el padding al tamaño del elemento */   
+}
+
+*, *:before, *:after{
+    box-sizing: inherit; /* Es parte del snipet para el paddin y el tamaño del elemento */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem; /** Se reestablece los 16px para el body del elemento raiz (html) **/
+    line-height: 2;
+}   
+
+/** Globales **/
+img{
+    max-width: 100%;
+}
+
+.button {
+    background-color: #00b8e0;
+    padding: 1rem 6rem;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #037f9e;
+}
+
+.container{
+    max-width: 120rem; /** = 1200px **/
+    margin: 0 auto;
+    /*overflow: auto; /* Alternativa para limpiar los float */
+}
+
+/* Limpieza de los floats con una clase */
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/** Navegación responsive **/
+.navigation-bar {
+    overflow: hidden;
+}
+
+.mobile-menu {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    padding: 2rem 0;
+}
+
+#nav:target {
+    max-height: 80rem;
+}
+.main-navigation {
+    max-height: 0;
+    transition: .5s;
+}
+
+@media (min-width: 768px){
+    .main-navigation {
+        max-height: unset;
+    }
+    .mobile-menu,
+    .cerrar {
+        display: none!important;
+    }
+
+}
+/** Header **/
+.site-header {
+    padding: 2rem 0;
+}
+
+/** Navegación **/
+.navigation-bar {
+    background-color: #DB008D;
+}
+
+.main-navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .main-navigation a {
+        display: inline-block;
+        padding: 1.5rem;
+    }
+}
+
+.main-navigation a:hover {
+    background-color: #00B8E4;
+}
+
+/** Contenedores Principal **/
+.main-content {
+    margin-top: 2rem;
+}
+.main-content,
+.sidebar {
+    padding: 2rem ;
+}
+
+@media (min-width: 768px){
+    .main-content {
+        width: 70%;
+        float: left;
+        padding-right: 0 6rem 0 0;
+    }
+    
+    .sidebar {
+        width: 30%;
+        float: right;
+        padding: 0;
+        margin-top: 4rem;
+    }
+}
+
+
+/* Entradas de blog */
+h2 {
+    color: #00b8e0;
+    margin-bottom: 2rem;
+}
+
+.blog-post {
+    margin-bottom: 5rem;
+}
+
+.blog-post:last-of-type {
+    margin-bottom: 0;
+}
+
+.blog-post img {
+    display: block;
+}
+
+@media (min-width: 480px){
+    .blog-post img {
+        width: 30rem;
+        float: left;
+        margin: 0 3rem 0 0;
+    }
+}
+
+.blog-post p {
+    text-align: justify;
+}
+
+/** Sidebar **/
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 1.5rem;
+    padding: .8rem;
+}
+
+.sidebar ul li:hover{
+    background-color: #00B8E4;
+}
+
+.sidebar ul li a{
+    color: #00B8E4;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a{
+    color: #ffffff;
+}
+
+/** Footer **/
+
+.site-footer {
+    background-color: #DB008D;
+    padding: 4rem 0 0 0;
+    margin-top: 4rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-footer h2 {
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-right: 2rem;
+}
+
+.site-footer a:last-of-type {
+    margin-right: 0;
+}
+
+@media (min-width: 768px){
+    .site-footer .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+
+    .site-footer .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+
+.copyright {
+    background-color: #b10474;
+    margin: 4rem 0 0 0;
+    padding: 2rem 0;
+}

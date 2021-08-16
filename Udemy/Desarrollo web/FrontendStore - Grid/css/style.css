@@ -1,0 +1,243 @@
+:root {
+    --fuentePrincipal: 'Staatliches', cursive;
+
+    --colorPrimario: #9c27b0;
+    --colorPrimarioOscuro: #89119d;
+    --colorSecundario: #ffce00;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--colorPrimario);
+    line-height: 2;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    color: var(--colorSecundario);
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--fuentePrincipal);
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 100rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    display: grid;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.navigation-bar {
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1rem 0;
+}
+
+.navigation-bar .navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    column-gap: 2rem;
+    justify-content: center;
+}
+
+.navigation-bar .navigation a {
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigation-bar .navigation a:hover {
+    color: var(--colorSecundario);
+}
+
+.product-list {
+    display: grid;
+    gap: 2rem;
+}
+
+
+@media (min-width: 420px){
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 768px){
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product {
+    text-align: center;
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1rem;
+}
+
+.content-product p{
+    font-family: var(--fuentePrincipal);
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.content-product .title {
+    font-size: 4rem;
+}
+
+.content-product .price {
+    font-size: 2.8rem;
+    color: var(--colorSecundario);
+}
+
+.grafic {
+    min-height: 30rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.grafic-1 {
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;
+    
+}
+
+.grafic-2 {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 12 / 13;
+}
+
+@media (min-width: 420px){
+    .grafic-1 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+    
+    .grafic-2 {
+        grid-row: 8 / 9;
+        grid-column: 1 / 3;
+    }
+}
+
+@media (min-width: 768px){
+    .grafic-2 {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+
+
+.container-information {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 2rem;       
+    align-items: center;
+}
+
+
+.container-information .description {
+    text-align: justify;
+}
+
+
+.container-information img {
+    margin: 0 auto;
+}
+
+.site-footer {
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.copyright {
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.order-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    gap: 1rem;
+}
+
+.field {
+    background-color: transparent;
+    border: 5px solid #ffffff;
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    padding: 1rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.size {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    grid-column: 1 / 3;
+}
+
+option {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--colorPrimario);
+}
+
+.button {
+    background-color: var(--colorSecundario);
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    border: none;
+    transition: background-color .3s ease-in-out;
+    grid-column: 1 / -1;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(233, 187, 2);
+}
+
+
+

@@ -1,0 +1,36 @@
+document.write("<h1>Hello world!</h1>");
+
+// Tipos de datos JS
+
+// string
+"Hello World" 
+'Hello World' 
+
+// number
+11 
+7.5 
+-500
+
+//boolean 
+true
+false
+
+// array 
+['Alejandro', 'Luis', 'David']
+[1,7,11]
+[true, false, true, false]
+
+// object
+{
+    "username": 'Briamtss',
+    "score": 90.5,
+    "gameHours": 17,
+    "proffesiona": true
+    "friendsList": ['Dakota', 'faker','Teddy']
+
+}
+
+// Definición de una variable
+ var name = "John";
+ // Nuevas versiones
+ let lastname = "Carther";

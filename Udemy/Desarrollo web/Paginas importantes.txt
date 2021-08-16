@@ -1,0 +1,17 @@
+Paginas importantes del desarrollo web:
+	Font awesome (Iconos):
+		https://fontawesome.com/
+	Google Fonts (Tipografía):
+		https://fonts.google.com/
+	Snippet * { Box-sizing: Border-box } (Paul Irish):
+		https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+	WebGradients (Generador de gradiantes):
+		https://webgradients.com/
+	ColorZilla (Gradient Generator):
+		https://www.colorzilla.com/chrome/
+	CSS matic 
+		https://www.cssmatic.com/
+	Normalize
+		https://necolas.github.io/normalize.css/
+	Undraw
+		https://undraw.co

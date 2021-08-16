@@ -1,0 +1,15 @@
+.box {
+    width: 200px;
+    height: 250px;
+    float: left;
+    margin: 20px;
+}
+
+.dashed {
+    border: 3px dashed black;
+    padding: 5px;
+}
+
+.error {
+    color: rgb(179, 13, 13);
+}

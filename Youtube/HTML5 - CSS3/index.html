@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Practica HTML5 - CSS3</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo2.png" alt="Logo principal" id="logoPrincipal">
+        </div>
+        <div>
+            <h1>Titulo principal del header</h1>
+            <p>Texto complementario del header (descripción del título principal).</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-opcion">Inicio</div>
+        <div class="nav-opcion">HTML5 Cursos</div>
+        <div class="nav-opcion">CSS3 Cursos</div>
+        <div class="nav-opcion">Certificación</div>
+        <div class="nav-opcion">Preguntas frecuentes</div>
+        <div class="nav-opcion">Acerca de</div>
+    </nav>
+    <div id="contenido-general">
+        <section id="contenido">
+            <header id="titulo-contenido">
+                <h2>Título principal del contenido</h2>
+                <p>Texto descriptivo relacionado con la sección del contenido.</p>
+            </header>
+            <div id="seccion-articulos">
+                <article>
+                    <h3>Articulo número 1</h3>
+                    <p>
+                        Aqui se muestra toda la información relacionada con el contenido del articulo, mostrando datos, imagenes, o solo texto
+                        de lo que se va a exponer del tema a tratar.
+                    </p>
+                    <img src="articulo1.png" alt="Imagen del articulo 1" class="image-articulo">
+                </article>
+                <article>
+                    <h3>Articulo número 2</h3>
+                    <p>
+                        Aqui se muestra toda la información relacionada con el contenido del articulo, mostrando datos, imagenes, o solo texto
+                        de lo que se va a exponer del tema a tratar.
+                    </p>
+                    <img src="articulo2.png" alt="Imagen del articulo 1" class="image-articulo">
+                </article>
+                <article>
+                    <h3>Articulo número 3</h3>
+                    <p>
+                        Aqui se muestra toda la información relacionada con el contenido del articulo, mostrando datos, imagenes, o solo texto
+                        de lo que se va a exponer del tema a tratar.
+                    </p>
+                    <img src="articulo3.png" alt="Imagen del articulo 1" class="image-articulo">
+                </article>
+            </div>
+        </section>
+        
+        <aside>
+            <h3>¿Qué es lo que estas buscando?</h3>
+            <section id="busqueda">
+                
+                <input type="search" value="Busca información">
+                <button>Buscar</button>
+            </section>
+            <section>
+                <h3>Formulario de contacto</h3>
+                <form action="index.html">
+                    <label>Nombre: <input type="text"> Apellidos: <input type="text"> </label>
+                    <label>Correo electrónico: <input type="email" id="email"></label>
+                    <label>Contraseña: <input type="password" id="password"></label>
+                    <textarea>Ingresa tus comentarios...</textarea>
+                    <button>Enviar</button>
+                </form>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        Derechos reservados Briam Flores &copy; 2020
+        <time>Miércoles 03 de Junio del 2020</time>
+    </footer>
+
+</body>
+</html>

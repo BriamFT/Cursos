@@ -1,0 +1,494 @@
+html{
+    font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px (snipet)
+    Elemento Raiz (ROOT EM = rem) Este valor es igual para todo el documento **/ 
+    box-sizing: border-box; /* Snipet para que no afecte el padding al tamaño del elemento */   
+}
+
+*, *:before, *:after{
+    box-sizing: inherit; /* Es parte del snipet para el paddin y el tamaño del elemento */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem; /** Se reestablece los 16px para el body del elemento raiz (html) **/
+    line-height: 2;
+}   
+
+/** Globales **/
+img{
+    max-width: 100%;
+}
+.container{
+    width: 95%;
+    max-width: 120rem; /** = 1200px **/
+    margin: 0 auto;
+}
+/* Sistema de tamaños en titulares */
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/* Utilidades */
+.section{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.fw-300{
+    font-weight: 300;
+}
+.align-text{
+    text-align: center;
+}
+.d-block{
+    display: block!important;
+}
+
+.content-center{
+    max-width: 80rem;
+    text-align: justify;
+}
+/* Botones */
+.button{
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block; /* Los distintos elementos tienen un display, el caso de los enlaces es display: inline. 
+    Para poder poner margenes y tamaños en el, se requiere utilizar display:block*/
+    text-align: center;
+    border: none;
+
+    display: block; 
+    flex: 0 0 100%; /* Esto es debido a que algunos botones son hijos de elementos flex, y esto permite que abarque todo el espacio*/
+}
+
+@media (min-width: 768px){
+    .button {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+    
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.button-orange{
+    background-color: #E08709;
+}
+
+.button-green{
+    background-color: #71B100;
+}
+
+/** ---------------------------------- **/
+
+
+/* Definición del header */
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+
+.site-header.index{
+    background-image: url(../img/header.jpg);
+    height: 100vh; /* VH Viewport Height - Altura del dispositivo 100vh = 100% del Viewport */
+    min-height: 60rem;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container-header{
+    height: 100%; /** Ocupa todo el espacio del padre (side-header) **/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .container-header {
+        text-align: left;
+    }
+}
+
+.container-header h1{
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 1.5; /** Interlineado **/
+}
+
+.navigation{
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px){
+    .navigation{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+}
+
+/** Barra de navegación **/
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+
+@media (min-width: 768px){
+    nav a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem; /** == 18px **/
+    }
+    nav a:last-of-type {
+        margin: 0;
+    }
+}
+
+nav a:hover {
+    color: #71B100;
+}
+
+/** Mobile menu **/
+.mobile-menu img{
+    width: 5rem;
+}
+
+@media (min-width: 768px){
+    .mobile-menu {
+        display: none;
+    }
+}
+
+nav:target {
+    display: block;
+}
+
+nav {
+    display: none;
+}
+
+@media (min-width: 768px){
+    nav {
+        display: block;
+    }
+}
+
+
+/** Sección nosotros **/    
+@media (min-width: 768px){
+    .icons-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.icon{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .icon {
+        flex-basis: calc(33.3% - 1rem); /** Es como utilizar "width" pero en usando flexbox **/
+    }
+}
+
+/** Sección anuncios **/
+@media (min-width: 768px){
+    .container-anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.ad{
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px){
+    .ad {
+        flex: 0 0 calc(33.3% - 1rem);/*grow, shrink, basis*/
+    }
+}
+.content-ad{
+    padding: 2rem;
+}
+
+.content-ad h3,.content-ad p{
+    margin: 0;
+}
+ 
+.price{
+    color: #71B100;
+    font-weight: 700;
+}
+
+.button-all{
+    display: flex;
+    justify-content: end;
+}
+
+/* Sección Contacto */
+.contacto-image{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.content-contacto{
+    flex: 0 0 95%; /* Factor de crecimiento */
+    color: #ffffff;
+}
+
+.content-contacto p{
+    font-size: 1.8rem;
+}
+
+.icons-features{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    max-width: 50rem;
+    flex: 1;
+}
+
+.icons-features li{ 
+    display: flex;
+}
+
+.icons-features li img{
+    margin-right: 2rem;
+}
+
+/* Sección inferior */
+@media (min-width: 768px){
+    .lower-section{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .lower-section .blog{
+        flex-basis: 60%;
+    }
+    
+    .lower-section .testimonial{
+        flex-basis: calc(40% - 2rem);
+    }
+}
+
+
+.input-blog{
+    margin-bottom: 2rem;
+}
+
+.input-blog .image-blog{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .input-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.input-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px){
+    .input-blog .image-blog{
+        flex-basis: 40%;
+        background-position: center center;
+        background-size: cover; 
+        display: flex;
+        align-items: center;
+    }
+    
+    .input-blog .text-blog{
+        flex-basis: calc(60% - 3rem);
+    }
+}
+
+
+.text-blog a{
+    text-decoration: none;
+    color: #000000;
+}
+.text-blog h4{
+    margin: 0;
+    line-height: 1.4;
+}
+
+.text-blog h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.text-blog span{
+    color: #E08709;
+}
+
+/** Testimoniales **/
+.testimonial-text{
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+}
+
+.testimonial-text p{
+    text-align: right;
+}
+
+.testimonial-text blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute; /*El hijo siempre es absolute*/
+    top: 0;
+    left: -2rem;
+}
+
+.testimonial-text blockquote{
+    position: relative; /*El padre debe ser relativo para que los hijos tomen como referencia a este mismo...*/
+    padding-left: 4rem;
+    font-weight: 300;
+}
+
+/** Footer **/
+.site-footer{
+    background-color: #333333;
+}
+.container-footer{
+    padding: 3rem 0;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .container-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.site-footer nav{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .site-footer nav {
+        display: block;
+    }
+}
+.copyright{
+    margin: 0;
+    color: #ffffff;
+}
+
+
+
+/** Codigo para páginas internas **/
+/* Página Nosotros */
+
+@media (min-width: 768px){
+    .content-nosotros{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    }
+}
+
+
+.text-nosotros blockquote{
+    font-weight: 900;
+    margin: 0;
+    font-size: 2rem;
+    padding: 1rem 0 3rem 0;
+}
+
+.text-nosotros p{
+    text-align: justify;
+}
+
+/* Página anuncio */
+.property-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Página contacto */
+.contacto p{
+    font-size: 1.4rem;
+    color: #4F4F4F;
+    margin: 1rem 0 0 0;
+}
+
+legend{
+    font-size: 2.2rem;
+    color: #4F4F4F;
+
+}
+
+label{
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+input:not([type="submit"]), 
+textarea, 
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #E1E1E1;
+    margin-bottom: 1.2rem;
+    border: none;
+}
+
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+
+textarea{
+    height: 18rem;
+}
+
+.form-contacto{
+    max-width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

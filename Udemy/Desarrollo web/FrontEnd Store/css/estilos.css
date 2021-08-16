@@ -1,0 +1,111 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+50,a849a3+100 */
+    background: #e570e7; /* Old browsers */
+    background: -moz-linear-gradient(top, #e570e7 0%, #c85ec7 50%, #a849a3 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e570e7 0%,#c85ec7 50%,#a849a3 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e570e7 0%,#c85ec7 50%,#a849a3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.product-list {
+    padding: 0; 
+    list-style: none;
+}
+
+.product-list li {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+/** 2(0) + 1 Sirve para aplicar el clear a cada número de elemento según la formula**/
+.product-list li:nth-child(2n+1) {
+    clear: both;
+}
+
+@media (min-width: 768px){
+    .product-list li {
+        width: 33.3%;
+    }
+
+    .product-list li:nth-child(2n+1) {
+        clear: unset;
+    }
+
+    .product-list li:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+.product-list li img {
+    border: 10px solid rgba(128, 1, 195, .45);
+    transition: border-color .3s ease-in-out;
+}
+
+.product-list li img:hover {
+    border: 10px solid rgba(128, 1, 195, 1);
+}
+
+.product-list li p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+span.price {
+    color: #ffce00;
+    font-size: 40px;
+}
+
+.button {
+    background-color: #ffce00;
+    padding: 10px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #8001c3;
+    transition: background-color .3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ebbc00;
+}

@@ -1,0 +1,331 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/** Globales **/
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: auto;
+}
+
+h1,h2,h3,h4 {font-family: 'PT Sans', sans-serif;}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/** Utilidades **/
+.text-center {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+/** Grid **/
+@media (min-width: 768px){
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .columns-center {
+        justify-content: center;
+    }
+    .columns-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columns-6 {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columns-8 {
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columns-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columns-12 {
+        flex: 0 0 100%;
+    }
+}
+
+
+
+/** Botones **/
+.button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    text-decoration: none;
+    font-family: 'PT-Sans',sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    flex: 0 0 100%;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .button{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+    
+}
+
+.btn-primary {
+    background-color: #000000;
+}
+
+.btn-secondary {
+    background-color: #784d3c;
+}
+
+/** Header **/
+@media (min-width:768px) {
+    .navigation-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.site-header {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+}
+
+.site-header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.site-header h1 span {
+    font-weight: 700;
+}
+
+/** Navegación **/
+.navigation a {
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media (min-width: 768px){
+    .navigation a {
+        display: inline;
+        margin-right: 2rem;
+    }
+
+    .navigation a:last-of-type {
+        margin: 0;
+    }
+}
+
+.header-text {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px){
+    .header-text {
+        margin-top: 15rem;
+    }
+}
+
+.header-text p {
+    font-size: 2.2rem;
+}
+
+/**------------------ Header ------------------**/
+
+/** Contenido principal Inicio **/
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;    
+}
+
+@media (min-width: 768px){
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+.blog,
+.courses {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        justify-content: space-between;
+    }
+    .blog {
+        flex-basis: 66.6%;
+    }
+    .courses {
+        flex-basis: calc(33.3% - 3rem);
+    }
+}
+
+.blog-post {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.blog-post:last-of-type {
+    border: none;
+}
+
+/** Opcional 
+.blog-post {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-post .image {
+    flex: 0 0 40%;
+}
+
+.blog-post .blog-content {
+    flex: 0 0 calc(60% - 4rem);
+}
+**/
+
+/** Cursos Sidebar **/
+.courses-list {
+    padding: 0;
+    list-style: none;
+}
+
+.course {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.course:last-of-type {
+    border-bottom: none;
+}
+
+.course p {
+    font-family: 'PT-Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.course p span, .course p.description {
+    font-weight: 400;
+}
+
+/**------------------ Contenido principal ------------------**/
+
+/** Footer **/
+.site-footer {
+    background-color: #000000;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans',sans-serif;
+    text-align: center;
+} 
+
+.site-footer p span{
+    font-weight: 700;
+}
+
+/**------------------ Footer ------------------**/ 
+
+/** Contacto **/
+.contact-form {
+    background-color: #ffffff;
+    padding: 5rem;
+}
+
+@media (min-width: 768px){
+    .contact-form {
+        margin-top: -10rem;
+    }
+}
+
+.contact-form .field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.contact-form .field label {
+    flex: 0 0 8rem;
+}
+
+.contact-form .field input:not([type="submit"]),
+.contact-form textarea {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.contact-form textarea {
+    height: 20rem;
+}
+
+.contact-form .submit {
+    display: flex;
+    justify-content: flex-end;
+}
